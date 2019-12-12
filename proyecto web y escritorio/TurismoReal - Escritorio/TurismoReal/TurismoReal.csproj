@@ -1,0 +1,304 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{73A85E53-85BE-4FCB-BCD6-EC7C6EDC58B8}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>TurismoReal</RootNamespace>
+    <AssemblyName>TurismoReal</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.0.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Oracle.DataAccess, Version=4.112.2.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=AMD64" />
+    <Reference Include="Oracle.ManagedDataAccess, Version=4.122.19.1, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=MSIL">
+      <HintPath>packages\Oracle.ManagedDataAccess.19.3.0\lib\net40\Oracle.ManagedDataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="Oracle.ManagedDataAccess.EntityFramework, Version=6.122.19.1, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=MSIL">
+      <HintPath>packages\Oracle.ManagedDataAccess.EntityFramework.19.3.0\lib\net45\Oracle.ManagedDataAccess.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AgregarDepartamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AgregarDepartamento.Designer.cs">
+      <DependentUpon>AgregarDepartamento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AgregarInventario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AgregarInventario.Designer.cs">
+      <DependentUpon>AgregarInventario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AgregarServicio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AgregarServicio.Designer.cs">
+      <DependentUpon>AgregarServicio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AgregarUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AgregarUsuario.Designer.cs">
+      <DependentUpon>AgregarUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BuscarCheckIN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BuscarCheckIN.Designer.cs">
+      <DependentUpon>BuscarCheckIN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BuscarCheckOut.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BuscarCheckOut.Designer.cs">
+      <DependentUpon>BuscarCheckOut.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BuscarDepartamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BuscarDepartamento.Designer.cs">
+      <DependentUpon>BuscarDepartamento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BuscarInventario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BuscarInventario.Designer.cs">
+      <DependentUpon>BuscarInventario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BuscarServicio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BuscarServicio.Designer.cs">
+      <DependentUpon>BuscarServicio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BuscarUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BuscarUsuario.Designer.cs">
+      <DependentUpon>BuscarUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CheckIN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CheckIN.Designer.cs">
+      <DependentUpon>CheckIN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CheckOut.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CheckOut.Designer.cs">
+      <DependentUpon>CheckOut.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EliminarDepartamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EliminarDepartamento.Designer.cs">
+      <DependentUpon>EliminarDepartamento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EliminarInventario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EliminarInventario.Designer.cs">
+      <DependentUpon>EliminarInventario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EliminarServicio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EliminarServicio.Designer.cs">
+      <DependentUpon>EliminarServicio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EliminarUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EliminarUsuario.Designer.cs">
+      <DependentUpon>EliminarUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administrador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administrador.Designer.cs">
+      <DependentUpon>Administrador.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Funcionario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Funcionario.Designer.cs">
+      <DependentUpon>Funcionario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModicarUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModicarUsuario.Designer.cs">
+      <DependentUpon>ModicarUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModificarDepartamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModificarDepartamento.Designer.cs">
+      <DependentUpon>ModificarDepartamento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModificarInventario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModificarInventario.Designer.cs">
+      <DependentUpon>ModificarInventario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModificarServicio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModificarServicio.Designer.cs">
+      <DependentUpon>ModificarServicio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AgregarDepartamento.resx">
+      <DependentUpon>AgregarDepartamento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AgregarInventario.resx">
+      <DependentUpon>AgregarInventario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AgregarServicio.resx">
+      <DependentUpon>AgregarServicio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AgregarUsuario.resx">
+      <DependentUpon>AgregarUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BuscarCheckIN.resx">
+      <DependentUpon>BuscarCheckIN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BuscarCheckOut.resx">
+      <DependentUpon>BuscarCheckOut.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BuscarDepartamento.resx">
+      <DependentUpon>BuscarDepartamento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BuscarInventario.resx">
+      <DependentUpon>BuscarInventario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BuscarServicio.resx">
+      <DependentUpon>BuscarServicio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BuscarUsuario.resx">
+      <DependentUpon>BuscarUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CheckIN.resx">
+      <DependentUpon>CheckIN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CheckOut.resx">
+      <DependentUpon>CheckOut.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EliminarDepartamento.resx">
+      <DependentUpon>EliminarDepartamento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EliminarInventario.resx">
+      <DependentUpon>EliminarInventario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EliminarServicio.resx">
+      <DependentUpon>EliminarServicio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EliminarUsuario.resx">
+      <DependentUpon>EliminarUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administrador.resx">
+      <DependentUpon>Administrador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Funcionario.resx">
+      <DependentUpon>Funcionario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModicarUsuario.resx">
+      <DependentUpon>ModicarUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModificarDepartamento.resx">
+      <DependentUpon>ModificarDepartamento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModificarInventario.resx">
+      <DependentUpon>ModificarInventario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModificarServicio.resx">
+      <DependentUpon>ModificarServicio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\d9dfecbe-db61-4531-8e9f-9a3d73d84eb0_200x200.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\turismo.JPG" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
